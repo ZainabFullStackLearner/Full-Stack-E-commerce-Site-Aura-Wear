@@ -1,9 +1,9 @@
-"use client";
-
+'use client';
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
-export default function SuccessClientContent() {
+function SuccessContent() {
   const searchParams = useSearchParams();
   const sessionId = searchParams.get("session_id");
 
@@ -41,5 +41,17 @@ export default function SuccessClientContent() {
         </Link>
       </div>
     </div>
+  );
+}
+
+export default function SuccessClientContent() {
+  return (
+    <Suspense fallback={
+      <div className="max-w-2xl mx-auto px-4 py-16 text-center">
+        <div className="animate-pulse">Loading...</div>
+      </div>
+    }>
+      <SuccessContent />
+    </Suspense>
   );
 }

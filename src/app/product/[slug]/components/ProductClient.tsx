@@ -1,4 +1,3 @@
-"use client";
 import { ShoppingCart, Package } from "lucide-react";
 import ImageGallery from "../../../components/ImgesGallery";
 import { useCart } from "../../../context/Context";
