@@ -47,7 +47,7 @@ function SuccessContent() {
 export default function SuccessClientContent() {
   return (
     <Suspense fallback={
-      <div className="max-w-2xl mx-auto px-4 py-16 text-center">
+      <div className="max-w-2xl mx-auto px-4 py-17 text-center">
         <div className="animate-pulse">Loading...</div>
       </div>
     }>
