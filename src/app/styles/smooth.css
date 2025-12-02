@@ -1,0 +1,17 @@
+/* Smooth Zoom Customization */
+[data-rmiz-modal-overlay="visible"] {
+  backdrop-filter: blur(8px);
+  background-color: rgba(238, 232, 232, 0.4);
+  transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+}
+
+[data-rmiz-modal-img] {
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease;
+  transform: scale(0.97);
+}
+
+[data-rmiz-modal-img][data-rmiz-modal-state="opening"],
+[data-rmiz-modal-img][data-rmiz-modal-state="closing"] {
+  opacity: 0.9;
+  transform: scale(4);
+}

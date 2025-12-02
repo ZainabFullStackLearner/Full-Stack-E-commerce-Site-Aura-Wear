@@ -1,0 +1,5 @@
+# Ignore generated files from ESLint so vendor and generated output do not raise warnings
+src/generated/**
+.next/**
+node_modules/**
+public/**
