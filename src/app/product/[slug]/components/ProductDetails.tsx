@@ -1,9 +1,9 @@
 import { client } from "@/sanity/lib/client";
 import { notFound } from "next/navigation";
-import ProductClient from "./ProductClient";
+import ProductClient from "../ProductClient";
 
 // ----------------- GROQ Query -----------------
-const query = `*[_type == "product" && slug.current ==  slug][0]{
+const query = `*[_type == "product" && slug.current == $slug][0]{
   _id,
   name,
   slug,
