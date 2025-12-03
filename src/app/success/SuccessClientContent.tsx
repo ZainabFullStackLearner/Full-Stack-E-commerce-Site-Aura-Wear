@@ -50,7 +50,7 @@ function SuccessContent() {
           {/* Button */}
           <Link
             href="/"
-            className="inline-block w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 bg-green-600 hover:bg-green-700 text-white text-sm sm:text-base font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+            className="inline-block w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 bg-green-500 hover:bg-green-700 text-white text-sm sm:text-base font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
           >
             Continue Shopping
           </Link>
@@ -65,7 +65,7 @@ export default function SuccessClientContent() {
     <Suspense fallback={
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 sm:h-16 sm:w-16 border-b-2 border-green-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 sm:h-16 sm:w-16 border-b-2 border-green-400 mx-auto mb-4"></div>
           <p className="text-gray-600 text-sm sm:text-base">Loading...</p>
         </div>
       </div>

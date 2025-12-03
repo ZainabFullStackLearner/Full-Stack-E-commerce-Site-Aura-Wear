@@ -8,10 +8,12 @@ import Drop from './Drop'
 import { CgClose, CgMenu } from 'react-icons/cg'
 import { FiShoppingCart, FiUser } from 'react-icons/fi'
 
+import { useCart } from '../context/Context'
+
 const Mobile = () => {
   const [mobileOpen, setIsOpen] = useState(false)
   const { isSignedIn, user } = useUser()
-
+  const { totalItems } = useCart();
   // Prevent body scroll when menu is open
   useEffect(() => {
     if (mobileOpen) {
@@ -123,9 +125,8 @@ const Mobile = () => {
           >
             <div className="relative">
               <FiShoppingCart size={18} />
-              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
-                0
-              </span>
+              {totalItems > 0 && <span className='absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-xs'>{totalItems}</span>}
+              
             </div>
             Cart
           </Link>

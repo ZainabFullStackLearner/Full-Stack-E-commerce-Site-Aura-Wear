@@ -33,7 +33,7 @@ const Navbar = () => {
           {/* Cart Icon */}
           <Link href="/cart" className='flex items-center gap-1'>
             <CgShoppingCart size={24} />
-            {totalItems > 0 && <span className='bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs'>{totalItems}</span>}
+            {totalItems > 0 && <span className='absolute ml-5 mb-5 bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-xs'>{totalItems}</span>}
           </Link>
 
           {/* Auth Section */}
